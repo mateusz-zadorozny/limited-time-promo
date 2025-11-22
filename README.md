@@ -1,6 +1,11 @@
 # Limited Time Promo
 
-A WooCommerce plugin that enables time-limited promotional campaigns with conditional discounts, free shipping, and an animated sticky message bar.
+Create time-limited promotional campaigns with conditional discounts, free shipping, and animated sticky message bars.
+
+**Version:** 0.1.0  
+**Author:** Mateusz Zadorozny  
+**Author URI:** https://zadorozny.rocks  
+**License:** GPL v2 or later
 
 ## Features
 
@@ -19,9 +24,9 @@ A WooCommerce plugin that enables time-limited promotional campaigns with condit
 
 ## Requirements
 
-- WordPress 5.8 or higher
-- WooCommerce 5.0 or higher
-- PHP 7.4 or higher
+- WordPress 6.0 or higher
+- WooCommerce 10.0 or higher
+- PHP 8.0 or higher
 
 ## Installation
 
@@ -88,7 +93,7 @@ limited-time-promo/
 
 ## Changelog
 
-### 1.0.0
+### 0.1.0
 - Initial release
 - Time-based promotional campaigns
 - Conditional discounts and free shipping
