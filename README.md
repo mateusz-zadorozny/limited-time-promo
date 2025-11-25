@@ -2,7 +2,7 @@
 
 Create time-limited promotional campaigns with conditional discounts, free shipping, and animated sticky message bars.
 
-**Version:** 0.1.0  
+**Version:** 0.1.1  
 **Author:** Mateusz Zadorozny  
 **Author URI:** https://zadorozny.rocks  
 **License:** GPL v2 or later
@@ -92,6 +92,10 @@ limited-time-promo/
 ```
 
 ## Changelog
+
+### 0.1.1
+- Declared compatibility with WooCommerce High-Performance Order Storage (HPOS)
+- Synced internal version constant with plugin header
 
 ### 0.1.0
 - Initial release

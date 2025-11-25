@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Limited Time Promo
  * Description: Create time-limited promotional campaigns with conditional discounts, free shipping, and animated sticky message bars.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Mateusz Zadorozny
  * Author URI: https://zadorozny.rocks
  * Text Domain: limited-time-promo
@@ -21,11 +21,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants.
-define( 'LTP_VERSION', '1.0.0' );
+define( 'LTP_VERSION', '0.1.1' );
 define( 'LTP_PLUGIN_FILE', __FILE__ );
 define( 'LTP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LTP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LTP_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+
+/**
+ * Declare compatibility with WooCommerce High-Performance Order Storage (HPOS).
+ */
+add_action( 'before_woocommerce_init', 'ltp_declare_hpos_compatibility' );
+function ltp_declare_hpos_compatibility() {
+	if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+	}
+}
 
 /**
  * Check if WooCommerce is active
